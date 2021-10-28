@@ -1,0 +1,66 @@
+.news {
+    
+    &-head {
+
+        &__item {
+            display: inline-block;
+            margin-right: 12px;
+            margin-top: 0;
+            margin-bottom: 7px;
+            padding-top: 0;
+            vertical-align: baseline;
+        }
+    }
+
+    &-list {
+        list-style: none;
+        padding-left: 22px;
+
+        &__item {
+            position: relative;
+            margin-bottom: 8px;
+            margin-left: -22px;
+            padding-left: 22px;
+        }
+    }
+
+    &-stocks {
+        &__item {
+            position: relative;
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 9px;
+
+            &:hover::after {
+                width: max-content;
+                content: attr(data-title);
+                position: absolute;
+                z-index: 1;
+                border: 1px solid #000;
+                top: 25px;
+                left: -0px;
+                box-shadow: 0px 0px 4px 0px rgb(171 171 171);
+            }
+
+            &:hover::before {
+                position: absolute;
+                border-left: 10px solid rgb(171 171 171 / 0%);
+                border-right: 10px solid rgb(171 171 171 / 0%);
+                border-bottom: 10px solid #000;
+                top: 15px;
+                left: 25px;
+                content: '';
+            }
+        }
+
+        &__link {
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        &__change {
+            color: #999;
+        }
+    }
+}

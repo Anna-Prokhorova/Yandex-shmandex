@@ -1,0 +1,23 @@
+@font-family: Arial, Helvetica, sans-serif;
+@font-normal-size: 13px;
+@font-big-size: 16px;
+@font-superbig-size: 26px;
+@font-small-size: 9px;
+@font-bigger-size: 14px;
+
+.font-base() {
+    font-family: @font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: @font-normal-size;
+}
+
+.font-bold() {
+    .font-base();
+    font-weight: 600;
+}
+
+.font-bolder() {
+    .font-base();
+    font-weight: 700;
+}

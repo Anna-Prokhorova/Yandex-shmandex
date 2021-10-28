@@ -1,0 +1,39 @@
+.card {
+    border-radius: 8px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%);
+    box-sizing: border-box;
+    width: 180px;
+    padding: 12px 14px;
+    background: #fff;
+    position: relative;
+
+    &__user-icon {
+        top: 9px;
+        right: 11px;
+        position: absolute;
+        border-radius: 100px;
+        width: 34px;
+        height: 34px;
+        background-size: cover;
+        background-image: url(https://avavatar.ru/images/full/9/ZbuEhsX3XvmVj4f3.jpg);
+    }
+
+    &__username {
+        font-weight: 700;
+        display: block;
+    }
+
+    &__username::first-letter {
+        color: #c00;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
