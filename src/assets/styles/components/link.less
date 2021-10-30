@@ -1,22 +1,22 @@
 .link {
     text-decoration: none;
-    color: #0054b9;
+    color: @blue;
     cursor: pointer;
 
     &._danger {
-        color: #ee7b00;
+        color: @orange;
     }
     
     &._light {
-        color: #6da2e1;
+        color: @lightblue;
     }
     
     &._regular {
-        color: #000;
+        color: @black;
     }
     
     &:hover {
-        color: #c00;
+        color: @red;
     }
 
     &__icon {
@@ -71,11 +71,11 @@
     }
 
     &__text {
-        font-weight: 700;
+        .font-bolder();
         padding-left: 5px;
 
         &._big {
-            font-size: 26px;
+            font-size: @font-superbig-size;
             padding-left: 0;
             font-weight: normal;
         }
@@ -83,15 +83,15 @@
         &._small {
             display: block;
             margin-bottom: 3px;
-            font-size: 9px;
+            font-size: @font-small-size;
             text-align: center;
-            color: #90919d;
+            color: @lightgray;
             font-weight: normal;
             padding-left: 0;
         }
 
         &._pictitle {
-            font-size: 12px;
+            font-size: @font-smaller-size;
             font-weight: normal;
             padding-left: 0;
             text-align: center;

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     width: 180px;
     padding: 12px 14px;
-    background: #fff;
+    background: @white;
     position: relative;
 
     &__user-icon {
@@ -19,12 +19,12 @@
     }
 
     &__username {
-        font-weight: 700;
+        .font-bolder();
         display: block;
     }
 
     &__username::first-letter {
-        color: #c00;
+        color: @red;
     }
 
     &__title {

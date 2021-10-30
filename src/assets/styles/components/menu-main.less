@@ -1,0 +1,27 @@
+.menu-main {
+    display: flex;
+    list-style: none;
+    height: 60px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-left: 0px;
+    justify-content: space-between;
+    width: 941px;
+
+    &__title {
+        font-size: @font-smaller-size;
+        text-align: center;
+    }
+
+    &__item {
+        display: block;
+        width: 90px;
+        height: 60px;
+    }
+
+    &__link {
+        &:hover :first-child {
+            transform: translateY(-4px);
+        }
+    }
+}
