@@ -1,4 +1,4 @@
-@font-family: Arial, Helvetica, sans-serif;
+@font-family: 'Roboto', Arial, Helvetica, sans-serif;
 @font-normal-size: 13px;
 @font-big-size: 16px;
 @font-superbig-size: 26px;
@@ -21,4 +21,46 @@
 .font-bolder() {
     .font-base();
     font-weight: 700;
+}
+
+.font-big-size() {
+    font-family: @font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: @font-big-size;
+}
+
+.font-bigger-size() {
+    font-family: @font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: @font-bigger-size;
+}
+
+.font-superbig-size() {
+    font-family: @font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: @font-superbig-size;
+}
+
+.font-small-size() {
+    font-family: @font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: @font-small-size;
+}
+
+.font-smaller-size() {
+    font-family: @font-family;
+    font-weight: normal;
+    font-style: normal;
+    font-size: @font-smaller-size;
+}
+
+.font-big-bold() {
+    font-family: @font-family;
+    font-weight: 600;
+    font-style: normal;
+    font-size: @font-big-size;
 }

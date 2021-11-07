@@ -1,8 +1,11 @@
-html, body {
-    height: 100%;
+body {
+    &__svg-store {
+        &._hidden {
+            .hidden();
+        }
+    }
 }
 
 h1, h2 {
-    font-size: 123%;
-    font-weight: 600;
+    .font-big-bold();
 }

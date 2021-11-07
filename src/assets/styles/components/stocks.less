@@ -1,0 +1,37 @@
+.stocks {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 9px;
+
+    &:hover::after {
+        width: max-content;
+        content: attr(data-title);
+        position: absolute;
+        z-index: @popup;
+        border: 1px solid @black;
+        top: 25px;
+        left: -0;
+        box-shadow: 0 0 4px 0 @shadow;
+    }
+
+    &:hover::before {
+        position: absolute;
+        border-left: 10px solid @transparent;
+        border-right: 10px solid @transparent;
+        border-bottom: 10px solid @black;
+        top: 15px;
+        left: 25px;
+        content: '';
+    }
+
+    &__change {
+        color: @darkgray;
+    }
+
+    &__link {
+        .font-bold();
+        color: @black;
+        text-transform: uppercase;
+    }
+}
