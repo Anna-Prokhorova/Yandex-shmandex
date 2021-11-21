@@ -51,8 +51,22 @@ gulp.task("less", function () {
         .pipe(dest("./dist"));
 });
 
+gulp.task("less2", function () {
+    return src("./src/assets/styles/mail.less")
+        .pipe(less())
+        .pipe(
+            autoprefixer({
+                cascade: false,
+            })
+        )
+        .pipe(dest("./dist"));
+});
+
 gulp.task("html", function () {
     return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
+});
+gulp.task("html2", function () {
+    return gulp.src("./src/mail.html").pipe(gulp.dest("./dist"));
 });
 
 gulp.task("serve", function () {
@@ -69,6 +83,6 @@ gulp.task("serve", function () {
     gulp.watch("./dist/index.html").on("change", browserSync.reload);
 });
 
-gulp.task("build", series("svgstore", "less", "html"));
+gulp.task("build", series("svgstore", "less","less2", "html","html2"));
 
 gulp.task("default", series("svgstore", parallel("html", "less"), "serve"));
